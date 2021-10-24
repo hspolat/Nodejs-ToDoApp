@@ -1,0 +1,26 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "A simple to do app for your daily life",
+  "main": "app.js",
+  "dependencies": {
+    "alert": "^5.0.10",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "toDo",
+    "app",
+    "reminder"
+  ],
+  "author": "Huseyin Polat",
+  "license": "ISC"
+}

@@ -1,0 +1,34 @@
+<%- include('partials/_header') %>
+
+<body class="bg-light text-dark fs-5">
+  <div class="container">
+    <div class="row col-6 offset-3">
+      <form class="form" method="POST" action="/tasks">
+        <h3 class="mb-3 text-center mt-5">ToDo List App</h3>
+        <div class="form-group">
+          <textarea  class="form-control" name="description" aria-describedby="validationServer05Feedback" placeholder="Write a task" required></textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-primary mt-2 float-end"> Add </button>
+        </div>  
+      </form>
+    </div>
+    <div class="row col-6 offset-3">
+      <div class="form">
+        <% for(let i = tasks.length - 1 ; i >= 0 ; i--) { %> 
+          <div class="form-grup">              
+            <div class=" col-12 mt-4">
+             <ul>
+               <li>
+                <%= tasks[i].description %>
+                <a class="btn btn-lg btn-success float-end text-white text-center" href="/tasks/<%= tasks[i]._id %>?_method=DELETE">Done</a>
+               </li>
+             </ul>
+            </div>             
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
